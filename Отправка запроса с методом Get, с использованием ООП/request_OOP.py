@@ -2,13 +2,13 @@
 import requests
 
 #Создание общего класса
-class TestCreateJoke():
+class TestCreateJoke:
     url = "https://official-joke-api.appspot.com"
 
     #Метод для теста
     def test_create_random_joke(self):
-        type = 'general'
-        path_random_joke_general = f'/jokes/{type}/random'
+        type_category = 'general'
+        path_random_joke_general = f'/jokes/{type_category}/random'
         url_random_joke_general = self.url + path_random_joke_general
         print(url_random_joke_general)
 
@@ -27,7 +27,7 @@ class TestCreateJoke():
         print(joke_type)
 
         # Проверка корректности типа шутки
-        assert joke_type == type, 'Ошибка категории не совпали!'
+        assert joke_type == type_category, 'Ошибка категории не совпали!'
         print('Категории совпали')
 
         print('Тест прошел успешно')
