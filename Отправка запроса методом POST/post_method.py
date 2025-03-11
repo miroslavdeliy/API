@@ -2,7 +2,7 @@
 import requests
 
 # Создание общего класса
-class test_new_location:
+class TestNewLocation:
 
     # Конструктор
     def __init__(self):
@@ -78,7 +78,7 @@ class test_new_location:
            print('Статус код GET корректен')
 
 
-start = test_new_location()
+start = TestNewLocation()
 start.test_post_method(200, 'file_id.txt')
 start.test_get_method(200, 'file_id.txt')
 print('\nТест прошел успешно')
